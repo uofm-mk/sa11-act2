@@ -1,5 +1,5 @@
 def parse_log_entry(log)
-  pattern = nil
+  pattern = /^(INFO|WARN|ERROR): (.+)$/
   match = log.match(pattern)
   [match[1], match[2]] if match
 end
